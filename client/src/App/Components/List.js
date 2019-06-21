@@ -13,7 +13,8 @@ class List extends Component {
     state = {
         releases: [],
         type: 'product',
-        isOpen: false
+        isOpen: false,
+        project: 'maua-adminportal'
     };
 
     componentDidMount() {
@@ -52,10 +53,21 @@ class List extends Component {
         this.setState({ type: e.target.value })
     }
 
+    chooseProject(e) {
+        this.setState({ project: e.target.value })
+    }
+
     render() {
-        const { type = 'product', releases: list = [] } = this.state;
+        const { type = 'product', releases: list = [], project = 'maua-adminportal' } = this.state;
         return (
             <>
+                <select value={type} onChange={(e) => this.chooseProject(e)} >
+                    <option value="maua-adminportal">Adminportal</option>
+                    <option value="maua-backend">Backend</option>
+                    <option value="maua-buyer">Buyer</option>
+                    <option value="maua-frontend">Frontend</option>
+                    <option value="maua-vendor">Vendor</option>
+                </select>
                 <select value={type} onChange={(e) => this.chooseEnviroment(e)} >
                     <option value="product">Product</option>
                     <option value="staging">Staging</option>
@@ -87,6 +99,7 @@ class List extends Component {
                                         type={type}
                                         setVersion={(name, version) => this.setNameVersion(name, version)}
                                         key={index}
+                                        project={project}
                                     />);
                                 })
                             }
