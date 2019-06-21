@@ -1,0 +1,48 @@
+
+tr {
+    display: grid;
+    grid-template-columns: 20% 30% 15% 15% 20%;
+    td {
+        padding: 10px;
+        height: 20px;
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.54;
+        height: fit-content;
+        text-decoration: none;
+        text-align: center;
+        height: inherit;
+        border: 1px solid black;
+        input {
+            width: 100%;
+        }
+    }
+    .description {
+        &-text {
+            letter-spacing: 0.3px;
+            color: #404040;
+        }
+        &-thumbnail {
+            max-width: 150px;
+            max-height: 150px;
+            width: 100%;
+            cursor: pointer;
+        }
+    }
+    .name {
+        letter-spacing: 0.4px;
+        color: #0071ca;
+        height: inherit;
+    };
+    // .isSelected {
+    //     border: solid #0071ca;
+    //     border-width: 1px 1px 0px 0px;
+    // }
+}
+
+tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
