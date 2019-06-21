@@ -19,6 +19,9 @@
     "react-scripts": "2.0.3",
     "react-test-renderer": "^16.8.6"
   },
+  "engines": {
+    "node": "10.16.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
