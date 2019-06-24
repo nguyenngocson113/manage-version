@@ -8,7 +8,7 @@ class Home extends Component {
 		releases: [],
 		isLoading: false,
 		error: false,
-		evn: 'staging '
+		evn: 'staging'
 	};
 
 	componentDidMount() {
