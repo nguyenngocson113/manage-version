@@ -61,7 +61,7 @@ class List extends Component {
         const { type = 'product', releases: list = [], project = 'maua-adminportal' } = this.state;
         return (
             <>
-                <select value={type} onChange={(e) => this.chooseProject(e)} >
+                <select value={project} onChange={(e) => this.chooseProject(e)} >
                     <option value="maua-adminportal">Adminportal</option>
                     <option value="maua-backend">Backend</option>
                     <option value="maua-buyer">Buyer</option>

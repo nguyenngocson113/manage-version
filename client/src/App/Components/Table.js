@@ -24,13 +24,15 @@ class Table extends Component {
                 dateCreated = '',
                 versionName = ''
             } = {},
-            type = ''
+            type = '',
+            project = ''
         } = this.props;
 
         const { isUpdate = false } = this.state;
         const isVersionProduct = version.includes(type);
+        const isProject = name.indexOf(project) > -1;
         return (
-            (isVersionProduct &&
+            (isVersionProduct && isProject &&
                 <tr key={index}>
                     <td tabIndex={index}><span>{name}</span></td>
                     <td tabIndex={index}><span>{version}</span></td>
